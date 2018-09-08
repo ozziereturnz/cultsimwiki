@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": false,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "moduleResolution": "node", 
+        "declaration": false,
+        "lib": [
+            "es2015", 
+            "dom"
+        ]
+    },
+    "include": [
+        "./src/**/*",
+        "./Typings/**/*",
+        "./__tests__/**/*"
+    ]
+}
