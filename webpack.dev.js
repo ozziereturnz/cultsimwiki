@@ -1,5 +1,6 @@
 const path = require("path");
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
     mode: "development",
@@ -7,6 +8,9 @@ module.exports = {
     output: {
         filename: "[name].js",
         path: path.resolve(__dirname, "Public"),
+    },
+    optimization: {
+        runtimeChunk: true,
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"],
@@ -40,5 +44,9 @@ module.exports = {
     },
     plugins: [
       new ExtractTextPlugin('[name].css'),
+      new HtmlWebpackPlugin({
+        filename: 'app.html',
+        template: './assets/app.html'
+      }),
     ],
 }
