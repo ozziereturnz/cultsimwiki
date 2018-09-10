@@ -1,0 +1,20 @@
+[
+    {
+        "ID": "00000000-0000-0000-0000-000000000001",
+        "Number": 1,
+        "Name": "Bulbasaur",
+        "ImageURL": null
+    },
+    {
+        "ID": "00000000-0000-0000-0000-000000000002",
+        "Number": 2,
+        "Name": "Ivysaur",
+        "ImageURL": null
+    },
+    {
+        "ID": "00000000-0000-0000-0000-000000000003",
+        "Number": 3,
+        "Name": "Venusaur",
+        "ImageURL": null
+    }
+]

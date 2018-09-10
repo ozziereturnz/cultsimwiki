@@ -4,4 +4,4 @@ import { MainPage } from "./Components/MainPage";
 
 const root = document.getElementById("oz-app") as HTMLElement;
 
-ReactDOM.render(<MainPage />, root);
+ReactDOM.render(<MainPage InitDataSource={root.dataset.app} />, root);
