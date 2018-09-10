@@ -1,7 +1,7 @@
 {
-    "name": "@ozgaming/cultsimwiki",
+    "name": "@ozgaming/enpoklepedia",
     "version": "0.0.1",
-    "description": "A wiki for the game Cultist Simulator.",
+    "description": "A pokemon wiki.",
     "main": "./src/app.tsx",
     "scripts": {
         "build": "webpack --config ./webpack.dev.js",
@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/ozziereturnz/cultsimwiki"
+        "url": "https://github.com/ozziereturnz/enpoklepedia"
     },
     "keywords": [],
     "author": "ozgaming",
