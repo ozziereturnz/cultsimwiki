@@ -10,6 +10,7 @@ export interface IEnpoklepediaContextState {
     Pokemon?: enpoklepedia.IPokemon[];
 
     GetAllPokemon: () => void;
+    LoadingPokemon: boolean;
 }
 
 export class EnpoklepediaProvider extends React.Component<IEnpoklepediaContextProps, IEnpoklepediaContextState> {
@@ -17,17 +18,16 @@ export class EnpoklepediaProvider extends React.Component<IEnpoklepediaContextPr
         super(props);
         this.state = {
             GetAllPokemon: () => {
-                if (this.props.DataSource) {
+                if (this.props.DataSource && !this.state.LoadingPokemon) {
+                    this.setState({ LoadingPokemon: true });
+
                     this.props.DataSource.GetAllPokemon((pokemon: enpoklepedia.IPokemon[]) => {
-                        this.setState({ Pokemon: pokemon });
+                        this.setState({ Pokemon: pokemon, LoadingPokemon: false });
                     });
                 }
             },
+            LoadingPokemon: false,
         };
-    }
-
-    public componentDidMount() {
-        this.state.GetAllPokemon();
     }
 
     public render() {

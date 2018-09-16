@@ -1,5 +1,6 @@
 import * as React from "react";
 import { EnpoklepediaConsumer, IEnpoklepediaContextState } from "../State/EnpoklepediaContext";
+import { PokemonNumber } from "./PokemonNumber";
 
 export interface IPokemonListProps {
 }
@@ -28,13 +29,14 @@ export class PokemonList extends React.Component<IPokemonListProps, IPokemonList
                 context.Pokemon.map((pokemon, index) => {
                     return (
                         <div key={index}>
-                            <span>{pokemon.Number}: </span>
-                            <span>{pokemon.Name}</span>
+                            <PokemonNumber Number={pokemon.Number} />
+                            <span>: {pokemon.Name}</span>
                         </div>
                     );
                 })
             );
         } else {
+            context.GetAllPokemon();
             return <div>Loading...</div>;
         }
     }
